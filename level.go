@@ -1,17 +1,16 @@
 package logrus
 
 import (
-	"strings"
 	"sync"
 )
 
 const (
-	ansiReset    = "\x1b[0m"    // reset attributes
-	ansiRed      = "\x1b[31m"   // red
-	ansiYellow   = "\x1b[33m"   // yellow
-	ansiCyan     = "\x1b[36m"   // cyan
-	ansiDimCyan  = "\x1b[2;36m" // dim cyan
-	ansiDimWhite = "\x1b[2;37m" // dim white (light gray)
+	ansiReset    = "\x1b[0m"
+	ansiRed      = "\x1b[31m"
+	ansiYellow   = "\x1b[33m"
+	ansiCyan     = "\x1b[36m"
+	ansiDimCyan  = "\x1b[2;36m"
+	ansiDimWhite = "\x1b[2;37m"
 )
 
 type lvlPrefix struct {
@@ -20,35 +19,11 @@ type lvlPrefix struct {
 	padded    string
 }
 
-func colorize(level Level, s string) string {
-	color := ansiCyan
-	switch level {
-	case TraceLevel:
-		color = ansiDimWhite
-	case DebugLevel:
-		color = ansiDimCyan
-	case WarnLevel:
-		color = ansiYellow
-	case ErrorLevel, FatalLevel, PanicLevel:
-		color = ansiRed
-	case InfoLevel:
-		color = ansiCyan
-	}
-	return color + s + ansiReset
-}
+func colorize(level Level, s string) string { _ = "STUB: not implemented"; return "" }
 
 func formatLevel(level Level, disableTrunc, pad bool, maxLen int) string {
-	upper := strings.ToUpper(level.String())
-
-	if pad && maxLen > len(upper) {
-		upper += strings.Repeat(" ", maxLen-len(upper))
-	}
-
-	if !pad && !disableTrunc && len(upper) > 4 {
-		upper = upper[:4]
-	}
-
-	return colorize(level, upper)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 var levelPrefixOnce = sync.OnceValues(func() (map[Level]lvlPrefix, lvlPrefix) {
@@ -82,20 +57,4 @@ var levelPrefixOnce = sync.OnceValues(func() (map[Level]lvlPrefix, lvlPrefix) {
 	return prefix, unknown
 })
 
-func levelPrefix(level Level, disableTrunc, pad bool) string {
-	prefix, unknown := levelPrefixOnce()
-
-	p, ok := prefix[level]
-	if !ok {
-		p = unknown
-	}
-
-	switch {
-	case pad:
-		return p.padded
-	case !disableTrunc:
-		return p.truncated
-	default:
-		return p.full
-	}
-}
+func levelPrefix(level Level, disableTrunc, pad bool) string { _ = "STUB: not implemented"; return "" }

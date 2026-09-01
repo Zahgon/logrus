@@ -4,18 +4,6 @@ package logrus
 
 import (
 	"io"
-	"os"
 )
 
-func checkIfTerminal(w io.Writer) bool {
-	switch v := w.(type) {
-	case *os.File:
-		fd := v.Fd()
-		if fd > uintptr(^uint(0)>>1) {
-			return false
-		}
-		return isTerminal(int(fd))
-	default:
-		return false
-	}
-}
+func checkIfTerminal(w io.Writer) bool { _ = "STUB: not implemented"; return false }

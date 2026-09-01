@@ -6,260 +6,102 @@ import (
 	"time"
 )
 
-// std is the package-level standard logger, similar to the default logger
-// in the stdlib [log] package.
 var std = New()
 
-// StandardLogger returns the package-level standard logger used by
-// the top-level logging functions.
-func StandardLogger() *Logger {
-	return std
-}
+func StandardLogger() *Logger { _ = "STUB: not implemented"; return nil }
 
-// SetOutput sets the standard logger output.
-func SetOutput(out io.Writer) {
-	std.SetOutput(out)
-}
+func SetOutput(out io.Writer) { _ = "STUB: not implemented"; return }
 
-// SetFormatter sets the standard logger formatter.
-func SetFormatter(formatter Formatter) {
-	std.SetFormatter(formatter)
-}
+func SetFormatter(formatter Formatter) { _ = "STUB: not implemented"; return }
 
-// SetReportCaller sets whether the standard logger will include the calling
-// method as a field.
-func SetReportCaller(include bool) {
-	std.SetReportCaller(include)
-}
+func SetReportCaller(include bool) { _ = "STUB: not implemented"; return }
 
-// SetLevel sets the standard logger level.
-func SetLevel(level Level) {
-	std.SetLevel(level)
-}
+func SetLevel(level Level) { _ = "STUB: not implemented"; return }
 
-// GetLevel returns the standard logger level.
-func GetLevel() Level {
-	return std.GetLevel()
-}
+func GetLevel() Level { _ = "STUB: not implemented"; return *new(Level) }
 
-// IsLevelEnabled checks if logging for the given level is enabled for the standard logger.
-func IsLevelEnabled(level Level) bool {
-	return std.IsLevelEnabled(level)
-}
+func IsLevelEnabled(level Level) bool { _ = "STUB: not implemented"; return false }
 
-// AddHook adds a hook to the standard logger hooks.
-func AddHook(hook Hook) {
-	std.AddHook(hook)
-}
+func AddHook(hook Hook) { _ = "STUB: not implemented"; return }
 
-// WithError creates an entry from the standard logger and adds an error to it,
-// using the value defined in [ErrorKey] as key.
-func WithError(err error) *Entry {
-	return std.WithError(err)
-}
+func WithError(err error) *Entry { _ = "STUB: not implemented"; return nil }
 
-// WithContext creates an entry from the standard logger and adds a context to it.
-func WithContext(ctx context.Context) *Entry {
-	return std.WithContext(ctx)
-}
+func WithContext(ctx context.Context) *Entry { _ = "STUB: not implemented"; return nil }
 
-// WithField creates an entry from the standard logger and adds a single field.
-// For multiple fields, prefer [WithFields] over chaining WithField calls.
-func WithField(key string, value any) *Entry {
-	return std.WithField(key, value)
-}
+func WithField(key string, value any) *Entry { _ = "STUB: not implemented"; return nil }
 
-// WithFields creates an entry from the standard logger and adds the fields to it.
-func WithFields(fields Fields) *Entry {
-	return std.WithFields(fields)
-}
+func WithFields(fields Fields) *Entry { _ = "STUB: not implemented"; return nil }
 
-// WithTime creates an entry from the standard logger and overrides the time
-// used for logs generated with it.
-func WithTime(t time.Time) *Entry {
-	return std.WithTime(t)
-}
+func WithTime(t time.Time) *Entry { _ = "STUB: not implemented"; return nil }
 
-// Trace logs a message at level [TraceLevel] on the standard logger.
-func Trace(args ...any) {
-	std.Trace(args...)
-}
+func Trace(args ...any) { _ = "STUB: not implemented"; return }
 
-// Debug logs a message at level [DebugLevel] on the standard logger.
-func Debug(args ...any) {
-	std.Debug(args...)
-}
+func Debug(args ...any) { _ = "STUB: not implemented"; return }
 
-// Print logs a message at level [InfoLevel] on the standard logger.
-func Print(args ...any) {
-	std.Print(args...)
-}
+func Print(args ...any) { _ = "STUB: not implemented"; return }
 
-// Info logs a message at level [InfoLevel] on the standard logger.
-func Info(args ...any) {
-	std.Info(args...)
-}
+func Info(args ...any) { _ = "STUB: not implemented"; return }
 
-// Warn logs a message at level [WarnLevel] on the standard logger.
-func Warn(args ...any) {
-	std.Warn(args...)
-}
+func Warn(args ...any) { _ = "STUB: not implemented"; return }
 
-// Warning logs a message at level [WarnLevel] on the standard logger.
-func Warning(args ...any) {
-	std.Warning(args...)
-}
+func Warning(args ...any) { _ = "STUB: not implemented"; return }
 
-// Error logs a message at level [ErrorLevel] on the standard logger.
-func Error(args ...any) {
-	std.Error(args...)
-}
+func Error(args ...any) { _ = "STUB: not implemented"; return }
 
-// Panic logs a message at level [PanicLevel] on the standard logger.
-func Panic(args ...any) {
-	std.Panic(args...)
-}
+func Panic(args ...any) { _ = "STUB: not implemented"; return }
 
-// Fatal logs a message at level [FatalLevel] on the standard logger,
-// then exits the process with status 1.
-func Fatal(args ...any) {
-	std.Fatal(args...)
-}
+func Fatal(args ...any) { _ = "STUB: not implemented"; return }
 
-// TraceFn logs a message from a func at level [TraceLevel] on the standard logger.
-func TraceFn(fn LogFunction) {
-	std.TraceFn(fn)
-}
+func TraceFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// DebugFn logs a message from a func at level [DebugLevel] on the standard logger.
-func DebugFn(fn LogFunction) {
-	std.DebugFn(fn)
-}
+func DebugFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// PrintFn logs a message from a func at level [InfoLevel] on the standard logger.
-func PrintFn(fn LogFunction) {
-	std.PrintFn(fn)
-}
+func PrintFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// InfoFn logs a message from a func at level [InfoLevel] on the standard logger.
-func InfoFn(fn LogFunction) {
-	std.InfoFn(fn)
-}
+func InfoFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// WarnFn logs a message from a func at level [WarnLevel] on the standard logger.
-func WarnFn(fn LogFunction) {
-	std.WarnFn(fn)
-}
+func WarnFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// WarningFn logs a message from a func at level [WarnLevel] on the standard logger.
-func WarningFn(fn LogFunction) {
-	std.WarningFn(fn)
-}
+func WarningFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// ErrorFn logs a message from a func at level [ErrorLevel] on the standard logger.
-func ErrorFn(fn LogFunction) {
-	std.ErrorFn(fn)
-}
+func ErrorFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// PanicFn logs a message from a func at level [PanicLevel] on the standard logger.
-func PanicFn(fn LogFunction) {
-	std.PanicFn(fn)
-}
+func PanicFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// FatalFn logs a message from a func at level [FatalLevel] on the standard logger,
-// then exits the process with status 1.
-func FatalFn(fn LogFunction) {
-	std.FatalFn(fn)
-}
+func FatalFn(fn LogFunction) { _ = "STUB: not implemented"; return }
 
-// Tracef logs a message at level [TraceLevel] on the standard logger.
-func Tracef(format string, args ...any) {
-	std.Tracef(format, args...)
-}
+func Tracef(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Debugf logs a message at level [DebugLevel] on the standard logger.
-func Debugf(format string, args ...any) {
-	std.Debugf(format, args...)
-}
+func Debugf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Printf logs a message at level [InfoLevel] on the standard logger.
-func Printf(format string, args ...any) {
-	std.Printf(format, args...)
-}
+func Printf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Infof logs a message at level [InfoLevel] on the standard logger.
-func Infof(format string, args ...any) {
-	std.Infof(format, args...)
-}
+func Infof(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Warnf logs a message at level [WarnLevel] on the standard logger.
-func Warnf(format string, args ...any) {
-	std.Warnf(format, args...)
-}
+func Warnf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Warningf logs a message at level [WarnLevel] on the standard logger.
-func Warningf(format string, args ...any) {
-	std.Warningf(format, args...)
-}
+func Warningf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Errorf logs a message at level [ErrorLevel] on the standard logger.
-func Errorf(format string, args ...any) {
-	std.Errorf(format, args...)
-}
+func Errorf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Panicf logs a message at level [PanicLevel] on the standard logger.
-func Panicf(format string, args ...any) {
-	std.Panicf(format, args...)
-}
+func Panicf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Fatalf logs a message at level [FatalLevel] on the standard logger,
-// then exits the process with status 1.
-func Fatalf(format string, args ...any) {
-	std.Fatalf(format, args...)
-}
+func Fatalf(format string, args ...any) { _ = "STUB: not implemented"; return }
 
-// Traceln logs a message at level [TraceLevel] on the standard logger.
-func Traceln(args ...any) {
-	std.Traceln(args...)
-}
+func Traceln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Debugln logs a message at level [DebugLevel] on the standard logger.
-func Debugln(args ...any) {
-	std.Debugln(args...)
-}
+func Debugln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Println logs a message at level [InfoLevel] on the standard logger.
-func Println(args ...any) {
-	std.Println(args...)
-}
+func Println(args ...any) { _ = "STUB: not implemented"; return }
 
-// Infoln logs a message at level [InfoLevel] on the standard logger.
-func Infoln(args ...any) {
-	std.Infoln(args...)
-}
+func Infoln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Warnln logs a message at level [WarnLevel] on the standard logger.
-func Warnln(args ...any) {
-	std.Warnln(args...)
-}
+func Warnln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Warningln logs a message at level [WarnLevel] on the standard logger.
-func Warningln(args ...any) {
-	std.Warningln(args...)
-}
+func Warningln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Errorln logs a message at level [ErrorLevel] on the standard logger.
-func Errorln(args ...any) {
-	std.Errorln(args...)
-}
+func Errorln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Panicln logs a message at level [PanicLevel] on the standard logger.
-func Panicln(args ...any) {
-	std.Panicln(args...)
-}
+func Panicln(args ...any) { _ = "STUB: not implemented"; return }
 
-// Fatalln logs a message at level [FatalLevel] on the standard logger,
-// then exits the process with status 1.
-func Fatalln(args ...any) {
-	std.Fatalln(args...)
-}
+func Fatalln(args ...any) { _ = "STUB: not implemented"; return }

@@ -2,6 +2,4 @@
 
 package logrus
 
-func checkIfTerminal(_ any) bool {
-	return false
-}
+func checkIfTerminal(_ any) bool { _ = "STUB: not implemented"; return false }

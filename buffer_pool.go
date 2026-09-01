@@ -22,16 +22,8 @@ type defaultPool struct {
 	pool *sync.Pool
 }
 
-func (p *defaultPool) Put(buf *bytes.Buffer) {
-	p.pool.Put(buf)
-}
+func (p *defaultPool) Put(buf *bytes.Buffer) { _ = "STUB: not implemented"; return }
 
-func (p *defaultPool) Get() *bytes.Buffer {
-	return p.pool.Get().(*bytes.Buffer)
-}
+func (p *defaultPool) Get() *bytes.Buffer { _ = "STUB: not implemented"; return nil }
 
-// SetBufferPool allows to replace the default logrus buffer pool
-// to better meet the specific needs of an application.
-func SetBufferPool(bp BufferPool) {
-	bufferPool = bp
-}
+func SetBufferPool(bp BufferPool) { _ = "STUB: not implemented"; return }
